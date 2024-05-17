@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="Header">
+            Welcome to Our Music Collection.
+        </div>
+    </header>
+
+    <div class="Refernce">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+
+    
+    
+    <main class="container">
+    
+       <div class="MainLeft">        
+        <div class="Left">
+
+            <ul class="Songs">
+                <li class="sName" id="song1" data-src="music/A sky full of stars.mp3"><a href="#">A Sky full of stars</a></li>
+                <li class="sName" id="song2" data-src="music/Airplanes.mp3"><a href="#">Airplanes</a></li>
+                <li class="sName" id="song3" data-src="music/Back to black.mp3"><a href="#">Back to black</a></li>
+                <li class="sName" id="song1" data-src="music/Bohemian rhapsody.mp3"><a href="#">Bohemian rhapsody</a></li>
+                <li class="sName" id="song2" data-src="music/Calm down.mp3"><a href="#">Calm down</a></li>
+                <li class="sName" id="song3" data-src="music/Counting stars.mp3"><a href="#">Counting stars</a></li>
+                <li class="sName" id="song1" data-src="music/Dont stop me now.mp3"><a href="#">Dont stop me now</a></li>
+                <li class="sName" id="song2" data-src="music/Easy on me.mp3"><a href="#">Easy on me</a></li>
+                <li class="sName" id="song3" data-src="music/Here.mp3"><a href="#">Here</a></li>
+                <li class="sName" id="song3" data-src="music/Highway to hell.mp3"><a href="#">Highway to hell</a></li>
+                
+                
+            </ul>
+
+        </div>
+        <div class="Left">
+
+            <ul class="Songs">
+                <li class="sName" id="song1" data-src="music/Hime and i.mp3"><a href="#">Him and I</a></li>
+                <li class="sName" id="song1" data-src="music/Human.mp3"><a href="#">Human</a></li>
+                <li class="sName" id="song1" data-src="music/Hymn for the weekend.mp3"><a href="#">Hymn for the weekend</a></li>
+                <li class="sName" id="song1" data-src="music/I hate u i love u.mp3"><a href="#">I hate u i love u</a></li>
+                <li class="sName" id="song1" data-src="music/Im good.mp3"><a href="#">Im good</a></li>
+                <li class="sName" id="song1" data-src="music/Im not the only one.mp3"><a href="#">Im not the only one</a></li>
+                <li class="sName" id="song1" data-src="music/Bad liar.mp3"><a href="#">Bad liar</a></li>
+                <li class="sName" id="song1" data-src="music/Let her go.mp3"><a href="#">Let her go</a></li>
+                <li class="sName" id="song1" data-src="music/Never be the same.mp3"><a href="#">Never be the same</a></li>
+                <li class="sName" id="song1" data-src="music/Numb.mp3"><a href="#">Numb</a></li>
+                
+                
+                
+            </ul>
+
+        </div>
+        <div class="Left">
+
+            <ul class="Songs">
+                <li class="sName" id="song1" data-src="music/Rewrite the stars.mp3"><a href="#">Rewrite the stars</a></li>
+                <li class="sName" id="song1" data-src="music/Rockstar.mp3"><a href="#">Rockstar</a></li>
+                <li class="sName" id="song1" data-src="music/Rolling in the deep.mp3"><a href="#">Rolling in the deep</a></li>
+                <li class="sName" id="song1" data-src="music/Someone like you.mp3"><a href="#">Someone like you</a></li>
+                <li class="sName" id="song1" data-src="music/Stay.mp3"><a href="#">Stay</a></li>
+                <li class="sName" id="song1" data-src="music/The middle.mp3"><a href="#">The middle</a></li>
+                <li class="sName" id="song1" data-src="music/Until i found u.mp3"><a href="#">Until i found u</a></li>
+                <li class="sName" id="song1" data-src="music/Without me.mp3"><a href="#">Without me</a></li>
+                <li class="sName" id="song1" data-src="music/Without u.mp3"><a href="#">Without u</a></li>
+                <li class="sName" id="song1" data-src="music/Yellow.mp3"><a href="#">Yellow</a></li>
+            </ul>
+
+        </div>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const songsList = document.querySelectorAll('.Songs li');
+            const audioPlayer = document.getElementById('audioPlayer');
+            const audioSource = document.getElementById('audioSource');
+
+            songsList.forEach(function(song) {
+                song.addEventListener('click', function() {
+                    const songSrc = this.getAttribute('data-src');
+                    audioSource.src = songSrc;
+                    audioPlayer.load();
+                    audioPlayer.play();
+                });
+            });
+        });
+    </script>
+
+
+
+    </div>
+        <div class="Right">
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mpeg">
+            </audio>
+            <p>Click (Ctrl+f) and search for the song you'd like to listen.</p>
+
+        </div>
+        
+
+
+
+
+    </main>
+
+
+
+
+    <footer>
+        <div class="Footer">
+            &copy;2024 LIU <br>Muhammad Abdallah<br> Hadi Mcheimech
+        </div>
+    </footer>
+
+</body>
+</html>
